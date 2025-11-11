@@ -16,3 +16,6 @@
     |---|----------|
     | 데이터셋| CheXpert, MedMNIST, MIMIC-CXR, KoMIMIC, KorQuAD |
     | 베이스라인 모델 | BioViL, MedCLIP, LLaVA-Med 등 |
+
+## 2025.11.11 ver
+- 연합 평가 방식을 활용한 멀티모달 의료 AI 벤치마크 구축
