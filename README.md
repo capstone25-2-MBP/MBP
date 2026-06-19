@@ -64,7 +64,7 @@
 
 본 프로젝트에서는 의료 AI 평가 프레임워크의 가능성을 확인하기 위해 다음과 같은 task를 중심으로 설계 및 실험을 진행하였습니다.
 
-1. 치과 파노라마 X-ray 기반 Multi-label Classification
+**1. 치과 파노라마 X-ray 기반 Multi-label Classification**
 
 치과 파노라마 X-ray 이미지를 대상으로 여러 치과 소견의 존재 여부를 예측하는 multi-label classification task를 설정하였습니다.
 
@@ -76,7 +76,7 @@
 
 각 모델에 대해 원본 이미지 기반 real AUROC와 proxy feature 기반 proxy AUROC를 계산하고, 두 결과의 차이를 비교합니다.
 
-2. ECG 기반 Multi-label Classification
+**2. ECG 기반 Multi-label Classification**
 
 심전도 데이터의 경우 signal-level multi-label classification task로 확장 가능하도록 설계하였습니다.
 
@@ -88,9 +88,9 @@
 
 
 ## Data
-1. Hospital Data
+**1. Hospital Data**
 
-본 프로젝트에서는 다음 병원 데이터를 사용하였습니다.
+본 연구에서는 다음 병원 데이터를 사용하였습니다.
 
 - 이대목동병원 치과 파노라마 X-ray 데이터
 - 이대서울병원 치과 파노라마 X-ray 데이터
@@ -99,7 +99,7 @@
 
 병원 데이터는 개인정보 보호 및 의료 데이터 반출 제한으로 인해 repository에 포함하지 않습니다.
 
-2. 학습용 공개데이터
+**2. 학습용 공개데이터**
 병원 데이터 기반 평가를 수행하기 전, 모델 학습 및 실험 구조 검증을 위해 공개 의료 데이터를 활용하였습니다.
 
 - [DENTEX Challenge 2023](https://dentex.grand-challenge.org/data/)
@@ -112,13 +112,13 @@
 - 오른쪽 그래프는 질병 라벨별 real AUROC와 proxy AUROC의 비교 결과를 나타낸다. 색상은 치아 우식, 치근단 병소, 잔존치근, 치주골 소실, 매복치와 같은 질병 라벨을 의미하며, 마커 형태는 사용된 모델 backbone을 나타낸다. 대부분의 점들이 대각선 주변에 분포하고 있어, proxy evaluation이 질병별 real evaluation 결과를 전반적으로 잘 근사하는 것으로 볼 수 있다. 특히 real AUROC가 높은 라벨에서는 proxy AUROC도 함께 높은 값을 보이는 경향이 나타났으며, 이는 proxy feature가 원본 데이터에서 모델이 학습한 판별 정보를 일정 수준 보존하고 있음을 의미한다.
 
 
-## 🧑‍🤝‍🧑 팀원 소개 (MBP Team)
+## 팀원 소개 (MBP Team)
 
 - 김채영  
 - 정지현  
 
 
-## 📂 문서 구조
+## 문서 구조
 
 
 - `GroundRule.md` : 팀 
@@ -127,3 +127,7 @@
 - `docs/` : 보고서 및 발표 자료
 - `src/` : 실험 및 평가 코드
 
+
+## Notes
+본 repository에는 개인정보 보호 및 병원 데이터 반출 제한으로 인해 원본 의료 데이터가 포함되어 있지 않습니다.
+실험 재현을 위해서는 병원 내부 승인된 환경에서 데이터를 준비하고고, 위에 명시한 공개 데이터셋을 별도로 다운로드해야 합니다.
